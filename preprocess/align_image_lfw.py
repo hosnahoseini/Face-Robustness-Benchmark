@@ -3,7 +3,9 @@ sys.path.insert(0, 'align_methods')
 from align import align
 import os
 from tqdm import tqdm
-from scipy.misc import imread, imsave
+# from scipy.misc import imread, imsave
+from matplotlib.pyplot import imread, imsave
+
 import cv2
 import numpy as np
 

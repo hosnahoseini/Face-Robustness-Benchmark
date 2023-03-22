@@ -34,6 +34,14 @@ import tensorflow as tf
 import cv2
 import os
 
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
+
+import numpy as np
+np_load_old = np.load
+np.load = lambda *a,**k: np_load_old(*a, allow_pickle=True, **k)
+
 def layer(op):
     '''Decorator for composable network layers.'''
 
